@@ -7,7 +7,7 @@ const getAll = async () => {
 
 const getById = async (id) => {
   const [[product]] = await connection.execute(
-    'SELECT * FROM exercises.employees WHERE id = ?',
+    'SELECT * FROM StoreManager.products WHERE id = ?',
     [id],
   );
   return product;
