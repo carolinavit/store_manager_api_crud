@@ -1,4 +1,5 @@
 const productService = require('../services/products.service');
+const { mapError } = require('../utils/errorMap');
 
 const getAll = async (_req, res, next) => {
   try {
@@ -22,7 +23,8 @@ const getById = async (req, res, next) => {
 const create = async (req, res, next) => {
    try {
      const { name } = req.body;
-     const id = await productService.create(name);
+     const { id, type, message } = await productService.create(name);
+     if (type) return res.status(mapError(type)).json({ message });
      return res.status(201).json({ id, name });
    } catch (error) {
      next(error);

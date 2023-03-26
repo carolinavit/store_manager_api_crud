@@ -1,4 +1,5 @@
 const productsModel = require('../models/products.model');
+const { validateNewProduct } = require('./validations/validateInputProduct');
 
 const httpErrGenerator = (status, message) => ({ status, message });
 
@@ -16,8 +17,10 @@ const getById = async (id) => {
 };
 
 const create = async (name) => {
+  const error = validateNewProduct(name);
+  if (error.type) return error;
   const id = await productsModel.create(name);
-  return id;
+  return { id };
 };
 
 module.exports = {
