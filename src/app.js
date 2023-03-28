@@ -4,10 +4,12 @@ const express = require('express');
 const app = express();
 const errorHandler = require('./middlewares/errorHandler');
 const productsRoute = require('./routes/productsRoute');
+const salesRoute = require('./routes/salesRoute');
 
 app.use(express.json());
 
 app.use('/products', productsRoute);
+app.use('/sales', salesRoute);
 
 app.use(errorHandler);
 

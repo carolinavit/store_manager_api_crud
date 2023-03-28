@@ -1,5 +1,5 @@
 const errorMap = {
-  NAME_REQUIRED: 400,
+  INPUT_REQUIRED: 400,
   INVALID_VALUE: 422,
 };
 
