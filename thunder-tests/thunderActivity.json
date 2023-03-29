@@ -64,5 +64,33 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "b3df0070-1bc7-404e-9deb-68f836a5dea2",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3001/sales",
+    "url": "localhost:3001/sales",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-03-29T10:10:08.019Z",
+    "modified": "2023-03-29T10:10:08.019Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "de935757-0221-4638-9886-277d55d3a20d",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3001/sales/2",
+    "url": "localhost:3001/sales/999",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-03-29T10:20:07.494Z",
+    "modified": "2023-03-29T14:36:29.372Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]
