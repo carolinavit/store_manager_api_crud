@@ -1,7 +1,5 @@
 const connection = require('./connection');
 
-// A tabela sales_products, com os atributos sale_id, product_id e quantity;
-
 const getAllSales = async () => {
   const [sales] = await connection.execute(`SELECT sp.sale_id AS saleId,
    sales.date, sp.product_id as productId, sp.quantity
