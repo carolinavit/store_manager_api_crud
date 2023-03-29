@@ -16,7 +16,6 @@ const getBySaleId = async (id) => {
     ON id = sale_id WHERE id = ?`,
     [id],
   );
-  console.log(sale);
   return sale;
 };
 

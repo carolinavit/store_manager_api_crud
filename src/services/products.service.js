@@ -23,9 +23,20 @@ const create = async (name) => {
   return { id };
 };
 
+const update = async (id, name) => {
+  const error = validateNewProduct(name);
+  if (error.type) return error;
+  const affectedRows = await productsModel.update(id, name);
+  if (!affectedRows) {
+    throw httpErrGenerator(404, 'Product not found');
+  }
+  return { type: null, message: name };
+};
+
 module.exports = {
   getAll,
   getById,
   create,
   httpErrGenerator,
+  update,
 };
